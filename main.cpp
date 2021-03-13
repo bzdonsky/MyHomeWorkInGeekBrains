@@ -43,7 +43,7 @@ int main()
     { // 3.0
         std::function<bool(int*,int)> CH_ptr = foo::checkBalanse;  // Указатель на Функцию проверяющая является  ли левая и правая часть массива равной из function_3.hpp
         int array[5]{1,1,1,2,1};
-        std::cout << CH_ptr(&array[0], 5);
+        std::cout << std::boolalpha << CH_ptr(&array[0], 5);
     }
 
     std::cout << '\n'; // конец третьего задания
