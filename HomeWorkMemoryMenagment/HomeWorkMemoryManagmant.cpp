@@ -17,8 +17,16 @@ void Glue (char arr1[], char arr2[], char glue[]){
     }
 
 }
-
-int main ()
+bool FindWord(std::istream& in, char* inWord){
+    std::string word;
+    while(in >> word){
+        if(word == inWord){
+            return true;
+        }
+    }
+    return false;
+}
+int main (int argc , char** argv)
 {
 
     std::ifstream Out ("out.txt");
@@ -52,5 +60,18 @@ int main ()
         std::cout << file3[i];
     }
     delete [] file3;
+    {
+        if(argc != 3){
+            std::cout << "Wrong";
+            return 1;
+        }
+        char *filename = argv[1];
+        char *word = argv[2];
+
+        std::ifstream in(filename);
+        std::cout << std::boolalpha << FindWord(in , word);
+
+    }
+
 return 0;
 }
