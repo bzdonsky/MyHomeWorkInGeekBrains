@@ -39,7 +39,21 @@ public:
         std::cout << std::endl;
     }
 
-
+    void setName(std::string _Name){
+        Name = _Name;
+    }
+    void setAge(std::uint8_t _Age){
+        Age = _Age;
+    }
+    void setGender(std::string _Gender){
+        Gender = _Gender;
+    }
+    void setWeight(std::uint8_t _Weight){
+        Weight = _Weight;
+    }
+    void setYear_of_study(std::uint16_t _Year_of_study){
+        Year_of_study = _Year_of_study;
+    }
     void setStudent(std::string _Name, std::uint8_t _Age, std::string _Gender, std::uint8_t _Weight,
                     std::uint16_t _Years_of_study) {
         Name = _Name;
